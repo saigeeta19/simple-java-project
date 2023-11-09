@@ -11,9 +11,11 @@ pipeline {
         
         stage('Build') {
             steps {
+                script {
                 // Use Maven to build the Java project
-                   'mvn clean install'
+                  sh 'mvn clean install'
             }
+          }
         }
         
         stage('Test') {
